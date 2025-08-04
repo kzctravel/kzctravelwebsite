@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K&Z Consulting - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAgg4_poQ0_N-QXxtCzusgyED80s7I8V4FE5HuOI3SBX1-piLjOHIljaS5PlitXCdyCy1XP43kBE8NYwQ&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+</head>
+<body>
+  <header>
+    <h1>K&Z Consulting</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/airplane-1995432_1280.jpg" alt="Airplane taking off" />
+      <h2>Book your next flight with confidence</h2>
+    </section>
+    <section class="payment">
+      <h3>Make a Payment</h3>
+      <div id="paypal-container-P2JBDPVN4XA42"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "P2JBDPVN4XA42",
+        }).render("#paypal-container-P2JBDPVN4XA42")
+      </script>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 K&Z Consulting</p>
+  </footer>
+</body>
+</html>
