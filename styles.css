@@ -2,193 +2,68 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f2e7;
-  color: #333;
+  background-color: #f9f5ef;
+  color: #222;
+  text-align: center;
 }
 
 header {
-  background-color: #fffaf0;
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-}
-
-h1 {
-  margin-bottom: 0.2rem;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem 1rem;
 }
 
 .tagline {
   font-style: italic;
-  color: #666;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #0077cc;
-}
-
-main {
-  padding: 2rem;
-  text-align: center;
-}
-
-.carousel {
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+section {
+  padding: 2rem 1rem;
 }
 
 .slider {
   display: flex;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
   scroll-snap-type: x mandatory;
-  gap: 10px;
 }
 
 .slider img {
-  width: 100%;
-  max-width: 800px;
-  scroll-snap-align: center;
-  border-radius: 8px;
-}
-
-.payment-section {
-  margin-top: 2rem;
-}
-
-.contact-form {
-  margin-top: 2rem;
+  flex-shrink: 0;
+  width: 80%;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+  height: auto;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  object-fit: cover;
 }
 
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form input, .contact-form textarea {
+input, textarea, button {
+  display: block;
+  margin: 0.5rem auto;
   padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+  width: 90%;
+  max-width: 400px;
+  font-family: inherit;
 }
 
-.contact-form button {
-  padding: 0.75rem;
-  background-color: #0077cc;
+button {
+  background-color: #222;
   color: white;
   border: none;
-  font-size: 1rem;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #fffaf0;
-  border-top: 2px solid #ddd;
-  color: #666;
-}
-
-.success-message {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  color: #333;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #0077cc;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-/* Carousel scrolling + centering */
-.carousel {
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  position: relative;
-}
-
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 10px;
-  scroll-behavior: smooth;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slider img {
-  width: 100%;
-  max-width: 800px;
-  scroll-snap-align: center;
-  border-radius: 8px;
-}
-
-/* Center PayPal */
-.payment-section {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .payment-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #paypal-container-P2JBDPVN4XA42 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 300px;
-  }
+button:hover {
+  background-color: #444;
 }
 
 .paypal-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin-top: 1rem;
-}
-
-#paypal-container-P2JBDPVN4XA42 {
-  max-width: 300px;
-  width: 100%;
-}
-
-/* Fix for PayPal buttons showing vertically */
-#paypal-container-P2JBDPVN4XA42 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-  min-width: 500px;
-  margin: 0 auto;
 }

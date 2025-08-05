@@ -13,7 +13,7 @@ function startAutoScroll() {
       left: scrollAmount,
       behavior: 'smooth'
     });
-  }, 8000); // 8 seconds per image
+  }, 8000);
 }
 
 function stopAutoScroll() {
