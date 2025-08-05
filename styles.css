@@ -1,56 +1,99 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f2e7;
+  color: #333;
 }
 
 header {
-  background-color: #111111;
-  padding: 1.5rem;
+  background-color: #fffaf0;
+  padding: 1rem;
   text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+h1 {
+  margin-bottom: 0.2rem;
+}
+
+.tagline {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
 nav a {
-  margin: 0 20px;
+  margin: 0 15px;
   text-decoration: none;
-  color: #8bd2f9;
-  font-weight: 600;
+  color: #0077cc;
 }
 
-main.centered {
+main {
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
   text-align: center;
 }
 
-.hero img {
+.carousel {
+  overflow: hidden;
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
 
-h1, h2, h3 {
-  color: #ffffff;
-  font-weight: 600;
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+}
+
+.slider img {
+  width: 100%;
+  max-width: 800px;
+  scroll-snap-align: center;
+  border-radius: 8px;
+}
+
+.payment-section {
+  margin-top: 2rem;
+}
+
+.contact-form {
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 footer {
   text-align: center;
-  padding: 1.5rem;
-  background-color: #111111;
-  color: #888;
-}
-
-.payment-clean {
-  margin-top: 2.5rem;
-  text-align: center;
-}
-
-#paypal-container-P2JBDPVN4XA42 {
-  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fffaf0;
+  border-top: 2px solid #ddd;
+  color: #666;
 }

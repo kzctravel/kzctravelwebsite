@@ -4,26 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K&Z Consulting - Home</title>
+  <title>K & Z Travel & Business Consultants</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://www.paypal.com/sdk/js?client-id=BAAgg4_poQ0_N-QXxtCzusgyED80s7I8V4FE5HuOI3SBX1-piLjOHIljaS5PlitXCdyCy1XP43kBE8NYwQ&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 </head>
 <body>
   <header>
-    <h1>K&Z Consulting</h1>
+    <h1>K & Z Travel & Business Consultants</h1>
+    <p class="tagline">Serving the community for over 30 years</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
     </nav>
   </header>
-  <main class="centered">
-    <section class="hero">
-      <img src="https://images.pexels.com/photos/1436697/pexels-photo-1436697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Airplane taking off" />
-      <h2>Book your next flight with confidence</h2>
+  <main>
+    <section class="carousel">
+      <div class="slider">
+        <img src="assets/europe.jpg" alt="Gallery image"><img src="assets/middle_east.jpg" alt="Gallery image"><img src="assets/africa.jpg" alt="Gallery image"><img src="assets/plane.jpg" alt="Gallery image">
+      </div>
     </section>
-    <section class="payment-clean">
-      <h3>Make a Payment</h3>
+    <section class="payment-section">
+      <h2>Make a Payment</h2>
       <div id="paypal-container-P2JBDPVN4XA42"></div>
       <script>
         paypal.HostedButtons({
@@ -33,7 +35,8 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 K&Z Consulting</p>
+    <p>&copy; 2025 K & Z Travel & Business Consultants</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
