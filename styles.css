@@ -153,3 +153,18 @@ footer {
   margin-top: 2rem;
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .payment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #paypal-container-P2JBDPVN4XA42 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+  }
+}

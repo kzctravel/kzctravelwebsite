@@ -1,24 +1,49 @@
 
-let slider = document.querySelector('.slider');
+const slider = document.querySelector('.slider');
+let scrollAmount = 0;
+let autoScroll;
+
+function startAutoScroll() {
+  autoScroll = setInterval(() => {
+    scrollAmount += slider.clientWidth;
+    if (scrollAmount >= slider.scrollWidth) {
+      scrollAmount = 0;
+    }
+    slider.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }, 4000); // Change image every 4s
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScroll);
+}
+
+slider.addEventListener('mouseenter', stopAutoScroll);
+slider.addEventListener('mouseleave', startAutoScroll);
+
 let isDown = false;
 let startX, scrollLeft;
 
-// Allow dragging to scroll (for mobile swipe effect)
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
   slider.classList.add('active');
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
+  stopAutoScroll();
 });
 
 slider.addEventListener('mouseleave', () => {
   isDown = false;
   slider.classList.remove('active');
+  startAutoScroll();
 });
 
 slider.addEventListener('mouseup', () => {
   isDown = false;
   slider.classList.remove('active');
+  startAutoScroll();
 });
 
 slider.addEventListener('mousemove', (e) => {
@@ -28,3 +53,5 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 2;
   slider.scrollLeft = scrollLeft - walk;
 });
+
+startAutoScroll();
