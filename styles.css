@@ -52,9 +52,9 @@ footer {
   border: 2px solid #ffffff;
   border-radius: 12px;
   background-color: #111111;
+  text-align: center;
 }
 
-#paypal-container-P2JBDPVN4XA42 {
+.paypal-wrapper {
   margin-top: 1rem;
 }
-
