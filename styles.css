@@ -46,9 +46,12 @@ footer {
   color: #888;
 }
 
-.payment, .about, .contact {
+.payment-box {
   margin-top: 2.5rem;
-  text-align: center;
+  padding: 2rem;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  background-color: #111111;
 }
 
 #paypal-container-P2JBDPVN4XA42 {
