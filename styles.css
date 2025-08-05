@@ -165,7 +165,7 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 1200px;
   }
 }
 
@@ -178,7 +178,7 @@ footer {
 }
 
 #paypal-container-P2JBDPVN4XA42 {
-  max-width: 300px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -188,7 +188,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 600px;
-  min-width: 500px;
+  max-width: 1200px;
+  min-width: 600px;
   margin: 0 auto;
 }
