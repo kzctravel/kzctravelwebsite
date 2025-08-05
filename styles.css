@@ -84,3 +84,17 @@ button:hover {
   align-items: center;
   margin-top: 1rem;
 }
+
+
+.slider {
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.slider img {
+  width: 100%;
+  max-width: 600px;
+  scroll-snap-align: center;
+}
