@@ -6,14 +6,14 @@ let autoScroll;
 function startAutoScroll() {
   autoScroll = setInterval(() => {
     scrollAmount += slider.clientWidth;
-    if (scrollAmount >= slider.scrollWidth) {
+    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
       scrollAmount = 0;
     }
     slider.scrollTo({
       left: scrollAmount,
       behavior: 'smooth'
     });
-  }, 4000); // Change image every 4s
+  }, 8000); // 8 seconds per image
 }
 
 function stopAutoScroll() {
