@@ -68,6 +68,8 @@ button:hover {
 
 .gallery {
   width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -75,14 +77,12 @@ button:hover {
 
 .slider {
   display: flex;
-  width: 90%;
-  max-width: 500px;
-  margin: 0 auto;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
+  gap: 1rem;
 }
 
 .slider::-webkit-scrollbar {
@@ -90,12 +90,11 @@ button:hover {
 }
 
 .slider img {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 10px;
-  aspect-ratio: 1 / 1;
-  width: 90%;
-  max-width: 90vw;      /* ✅ Keeps it inside screen width */
-  box-sizing: border-box;
 }
