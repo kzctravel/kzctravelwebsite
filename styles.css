@@ -69,10 +69,14 @@ button:hover {
 .gallery {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .slider {
   display: flex;
+  width: 100%;
+  max-width: 500px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -81,7 +85,7 @@ button:hover {
 }
 
 .slider::-webkit-scrollbar {
-  display: none; /* Safari/Chrome */
+  display: none; /* Chrome, Safari */
 }
 
 .slider img {
@@ -89,8 +93,6 @@ button:hover {
   scroll-snap-align: center;
   object-fit: cover;
   border-radius: 10px;
+  aspect-ratio: 1 / 1;
   width: 100%;
-  aspect-ratio: 1 / 1; /* 👈 This makes the image square */
-  max-width: 500px;     /* Optional: limits how big it gets */
-  margin: 0 auto;       /* Center on wider screens */
 }
