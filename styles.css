@@ -46,32 +46,11 @@ footer {
   color: #888;
 }
 
-.payment-box {
+.payment-clean {
   margin-top: 2.5rem;
-  padding: 2rem;
-  border: 2px solid #ffffff;
-  border-radius: 12px;
-  background-color: #111111;
   text-align: center;
 }
 
-.paypal-wrapper {
-  display: flex;
-  justify-content: center;
+#paypal-container-P2JBDPVN4XA42 {
   margin-top: 1rem;
-}
-
-.success-message {
-  margin-top: 3rem;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #8bd2f9;
-  color: #000000;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
 }
