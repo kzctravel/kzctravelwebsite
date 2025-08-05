@@ -39,25 +39,6 @@ section {
   padding: 2rem 1rem;
 }
 
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1rem;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory;
-}
-
-.slider img {
-  flex-shrink: 0;
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 10px;
-  scroll-snap-align: center;
-  object-fit: cover;
-}
-
 input, textarea, button {
   display: block;
   margin: 0.5rem auto;
@@ -86,24 +67,27 @@ button:hover {
 }
 
 .gallery {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 
 .slider {
   display: flex;
-  width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Safari/Chrome */
 }
 
 .slider img {
-  flex: none;
-  width: 100%;
-  height: auto;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
   object-fit: cover;
-  scroll-snap-align: start;
   border-radius: 10px;
+  max-height: 500px;
 }

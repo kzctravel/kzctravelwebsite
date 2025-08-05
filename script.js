@@ -1,19 +1,23 @@
 
 const slider = document.querySelector('.slider');
-let scrollAmount = 0;
 let autoScroll;
+let currentIndex = 0;
 
 function startAutoScroll() {
   autoScroll = setInterval(() => {
-    scrollAmount += slider.clientWidth;
-    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-      scrollAmount = 0;
+    const totalSlides = slider.children.length;
+    currentIndex++;
+
+    if (currentIndex >= totalSlides) {
+      currentIndex = 0;
     }
+
+    const scrollPosition = slider.children[currentIndex].offsetLeft;
     slider.scrollTo({
-      left: scrollAmount,
+      left: scrollPosition,
       behavior: 'smooth'
     });
-  }, 8000);
+  }, 4000); // Change this value to adjust timing
 }
 
 function stopAutoScroll() {
@@ -22,36 +26,5 @@ function stopAutoScroll() {
 
 slider.addEventListener('mouseenter', stopAutoScroll);
 slider.addEventListener('mouseleave', startAutoScroll);
-
-let isDown = false;
-let startX, scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-  stopAutoScroll();
-});
-
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-  startAutoScroll();
-});
-
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-  startAutoScroll();
-});
-
-slider.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2;
-  slider.scrollLeft = scrollLeft - walk;
-});
 
 startAutoScroll();
