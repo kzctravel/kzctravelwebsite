@@ -89,5 +89,8 @@ button:hover {
   scroll-snap-align: center;
   object-fit: cover;
   border-radius: 10px;
-  max-height: 500px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 👈 This makes the image square */
+  max-width: 500px;     /* Optional: limits how big it gets */
+  margin: 0 auto;       /* Center on wider screens */
 }
