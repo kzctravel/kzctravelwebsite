@@ -85,16 +85,25 @@ button:hover {
   margin-top: 1rem;
 }
 
+.gallery {
+  overflow: hidden;
+  width: 100%;
+}
 
 .slider {
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
   display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .slider img {
+  flex: none;
   width: 100%;
-  max-width: 600px;
-  scroll-snap-align: center;
+  height: auto;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border-radius: 10px;
 }
