@@ -165,7 +165,7 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
   }
 }
 
@@ -180,4 +180,15 @@ footer {
 #paypal-container-P2JBDPVN4XA42 {
   max-width: 300px;
   width: 100%;
+}
+
+/* Fix for PayPal buttons showing vertically */
+#paypal-container-P2JBDPVN4XA42 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  min-width: 500px;
+  margin: 0 auto;
 }
