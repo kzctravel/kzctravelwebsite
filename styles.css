@@ -1,48 +1,51 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #121212;
   color: #ffffff;
 }
 
 header {
   background-color: #1f1f1f;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
-  color: #00bcd4;
+  color: #8bd2f9;
+  font-weight: 600;
 }
 
-main {
-  padding: 1rem;
+main.centered {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
 }
 
 .hero img {
   width: 100%;
-  max-height: 300px;
+  max-height: 400px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
 }
 
 h1, h2, h3 {
-  color: #00bcd4;
+  color: #8bd2f9;
+  font-weight: 600;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #1f1f1f;
   color: #888;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .payment, .about, .contact {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
