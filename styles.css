@@ -168,3 +168,16 @@ footer {
     max-width: 300px;
   }
 }
+
+.paypal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#paypal-container-P2JBDPVN4XA42 {
+  max-width: 300px;
+  width: 100%;
+}
