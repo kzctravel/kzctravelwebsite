@@ -67,7 +67,7 @@ button:hover {
 }
 
 .gallery {
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -75,27 +75,27 @@ button:hover {
 
 .slider {
   display: flex;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  gap: 1rem;
-  justify-content: center;
+  scrollbar-width: none; /* Firefox */
 }
 
 .slider::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari */
 }
 
 .slider img {
-  display: block;
-  margin: 0 auto;
-  width: 90vw;            /* Responsive width */
-  max-width: 400px;       /* Prevents huge images */
-  height: auto;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
   object-fit: cover;
   border-radius: 10px;
-  aspect-ratio: 1 / 1;    /* Keeps it square */
+  aspect-ratio: 1 / 1;
+  width: 90%;
+  max-width: 90vw;      /* ✅ Keeps it inside screen width */
+  box-sizing: border-box;
 }
-
